@@ -188,7 +188,7 @@ body {
 
     &__input-field {
         position: relative;
-        order: 2;
+
 
         &--input {
             width: 427px;
@@ -201,6 +201,7 @@ body {
             color: #FFF;
 
             @media only screen and (max-width : $mobile) {
+            order: 2;
             width: 295px;
             height: 46px;
             font-size: 14px;
