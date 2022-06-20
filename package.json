@@ -1,0 +1,14 @@
+{
+  "name": "Pop request access landing page",
+  "version": "1.0.0",
+  "description": "Pop request access landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "author": "Babacar Ciss",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
