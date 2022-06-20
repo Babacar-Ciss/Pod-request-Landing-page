@@ -99,7 +99,7 @@ body {
     display: flex;
     justify-content: space-between; }
     .podcast-card__platforms > * {
-      color: #5A668A; }
+      filter: invert(42%) sepia(12%) saturate(1288%) hue-rotate(188deg) brightness(89%) contrast(84%); }
     .podcast-card__platforms img:first-child {
       width: 96px;
       height: 29px; }
@@ -112,3 +112,6 @@ body {
     .podcast-card__platforms img:last-child {
       width: 129px;
       height: 26px; }
+
+.hidden {
+  display: none; }
