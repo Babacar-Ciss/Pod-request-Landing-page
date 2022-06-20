@@ -2,12 +2,23 @@
   padding: 0;
   margin: 0; }
 
+html {
+  height: 100vh; }
+
 body {
   width: 100vw;
   height: 900px;
   background-color: #121725;
   position: relative;
   font-family: "Chivo", sans-serif; }
+  @media (min-width: 768px) and (max-width: 1440px) {
+    body {
+      width: 768px;
+      height: 100vh; } }
+  @media only screen and (max-width: 375px) {
+    body {
+      width: 375px;
+      height: 667px; } }
 
 .podcast-image {
   z-index: -1;
@@ -17,6 +28,24 @@ body {
   width: 888px;
   height: 640px;
   background-image: url(./assets/desktop/image-host.jpg); }
+  @media (min-width: 768px) and (max-width: 1440px) {
+    .podcast-image {
+      height: 1024px;
+      top: 0;
+      left: 277px;
+      background-image: url(/assets/tablet/image-host.jpg);
+      background-repeat: no-repeat; } }
+  @media only screen and (max-width: 375px) {
+    .podcast-image {
+      top: 0;
+      left: 0;
+      width: 375px;
+      height: 667px;
+      background-image: url(/assets/mobile/image-host.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #121725;
+      opacity: 0.15; } }
 
 .podcast-dot {
   z-index: 10;
@@ -26,11 +55,26 @@ body {
   width: 232px;
   height: 104px;
   background-image: url(./assets/desktop/bg-pattern-dots.svg); }
+  @media (min-width: 768px) and (max-width: 1440px) {
+    .podcast-dot {
+      top: 955px;
+      left: 30px; } }
+  @media only screen and (max-width: 375px) {
+    .podcast-dot {
+      display: none; } }
 
 .podcast-logo-and-title {
   position: absolute;
   top: 102px;
   left: 165px; }
+  @media (min-width: 768px) and (max-width: 1440px) {
+    .podcast-logo-and-title {
+      top: 50px;
+      left: 39px; } }
+  @media only screen and (max-width: 375px) {
+    .podcast-logo-and-title {
+      top: 62px;
+      left: 120px; } }
 
 .podcast-card {
   z-index: 10;
@@ -43,29 +87,72 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
+  @media (min-width: 768px) and (max-width: 1440px) {
+    .podcast-card {
+      top: 258px;
+      left: 39px;
+      width: 635px;
+      height: 509px; } }
+  @media only screen and (max-width: 375px) {
+    .podcast-card {
+      top: 175px;
+      left: 24px;
+      width: 327px;
+      height: 398px;
+      background-color: transparent; } }
   .podcast-card__title {
     margin-top: 62px; }
+    @media only screen and (max-width: 375px) {
+      .podcast-card__title {
+        margin-top: -25px; } }
     .podcast-card__title h1:first-child {
       font-size: 52px;
       font-weight: 300;
       line-height: 62px;
       text-transform: uppercase;
       color: #54E6AF; }
+      @media (min-width: 768px) and (max-width: 1440px) {
+        .podcast-card__title h1:first-child {
+          font-size: 48px; } }
+      @media only screen and (max-width: 375px) {
+        .podcast-card__title h1:first-child {
+          font-size: 26px;
+          line-height: 38px; } }
     .podcast-card__title h1:last-child {
       font-size: 52px;
       color: #FFF;
       font-weight: 300;
       line-height: 62px;
       text-transform: uppercase; }
+      @media (min-width: 768px) and (max-width: 1440px) {
+        .podcast-card__title h1:last-child {
+          font-size: 48px; } }
+      @media only screen and (max-width: 375px) {
+        .podcast-card__title h1:last-child {
+          font-size: 26px;
+          text-align: center;
+          line-height: 38px; } }
   .podcast-card__paragraph {
     width: 445px;
     height: 84px;
     font-size: 18px;
     color: #C2CBE5;
     font-weight: 300;
-    margin-top: -23px; }
+    margin-top: -23px;
+    line-height: 28px; }
+    @media only screen and (max-width: 375px) {
+      .podcast-card__paragraph {
+        width: 327px;
+        height: 100px;
+        font-size: 15px;
+        color: #C2CBE5;
+        font-weight: 300;
+        margin-top: -32px;
+        line-height: 25px;
+        text-align: center; } }
   .podcast-card__input-field {
-    position: relative; }
+    position: relative;
+    order: 2; }
     .podcast-card__input-field--input {
       width: 427px;
       height: 56px;
@@ -75,6 +162,13 @@ body {
       background-color: #2C344B;
       padding-left: 32px;
       color: #FFF; }
+      @media only screen and (max-width: 375px) {
+        .podcast-card__input-field--input {
+          width: 295px;
+          height: 46px;
+          font-size: 14px;
+          color: #FFF;
+          font-weight: 700; } }
     .podcast-card__input-field--button {
       position: absolute;
       top: 5px;
@@ -87,7 +181,17 @@ body {
       background-color: #54E6AF;
       border: none;
       border-radius: 30px;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 0.2s; }
+      @media only screen and (max-width: 375px) {
+        .podcast-card__input-field--button {
+          position: relative;
+          width: 326px;
+          padding: 9px 27px;
+          transform: translateX(-89%);
+          margin-top: 13px; } }
+      .podcast-card__input-field--button:hover {
+        background-color: #B3FFE2; }
     .podcast-card__input-field--warning {
       margin-top: 8px;
       margin-left: 32px;
@@ -98,20 +202,40 @@ body {
     height: 29px;
     display: flex;
     justify-content: space-between; }
+    @media only screen and (max-width: 375px) {
+      .podcast-card__platforms {
+        width: 315px;
+        height: 17px; } }
     .podcast-card__platforms > * {
       filter: invert(42%) sepia(12%) saturate(1288%) hue-rotate(188deg) brightness(89%) contrast(84%); }
     .podcast-card__platforms img:first-child {
       width: 96px;
       height: 29px; }
+      @media only screen and (max-width: 375px) {
+        .podcast-card__platforms img:first-child {
+          width: 56px;
+          height: 17px; } }
     .podcast-card__platforms img:nth-child(2) {
       width: 78px;
       height: 29px; }
+      @media only screen and (max-width: 375px) {
+        .podcast-card__platforms img:nth-child(2) {
+          width: 45px;
+          height: 17px; } }
     .podcast-card__platforms img:nth-child(3) {
       width: 125px;
       height: 18px; }
+      @media only screen and (max-width: 375px) {
+        .podcast-card__platforms img:nth-child(3) {
+          width: 73px;
+          height: 11px; } }
     .podcast-card__platforms img:last-child {
       width: 129px;
       height: 26px; }
+      @media only screen and (max-width: 375px) {
+        .podcast-card__platforms img:last-child {
+          width: 77px;
+          height: 15px; } }
 
 .hidden {
   display: none; }
