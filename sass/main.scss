@@ -175,6 +175,7 @@
             line-height: 28px;
     
             @media only screen and (max-width : $mobile) {
+            order: 1;
             width: 327px;
             height: 100px;
             font-size: 15px;
@@ -189,6 +190,9 @@
         &__input-field {
             position: relative;
     
+            @media only screen and (max-width : $mobile) {
+                order: 3;
+            }  
     
             &--input {
                 width: 427px;
@@ -201,7 +205,6 @@
                 color: #FFF;
     
                 @media only screen and (max-width : $mobile) {
-                order: 2;
                 width: 295px;
                 height: 46px;
                 font-size: 14px;
@@ -253,13 +256,15 @@
             height: 29px;
             display: flex;
             justify-content: space-between;
+
     
             @media only screen and (max-width : $mobile) {
                 width: 315px;
                 height: 17px;
+                order: 2;
             } 
     
-            & > * {
+            & > * { 
                 filter: invert(42%) sepia(12%) saturate(1288%) hue-rotate(188deg) brightness(89%) contrast(84%);
             }
     

@@ -142,6 +142,7 @@ body {
     line-height: 28px; }
     @media only screen and (max-width: 375px) {
       .podcast-card__paragraph {
+        order: 1;
         width: 327px;
         height: 100px;
         font-size: 15px;
@@ -152,6 +153,9 @@ body {
         text-align: center; } }
   .podcast-card__input-field {
     position: relative; }
+    @media only screen and (max-width: 375px) {
+      .podcast-card__input-field {
+        order: 3; } }
     .podcast-card__input-field--input {
       width: 427px;
       height: 56px;
@@ -163,7 +167,6 @@ body {
       color: #FFF; }
       @media only screen and (max-width: 375px) {
         .podcast-card__input-field--input {
-          order: 2;
           width: 295px;
           height: 46px;
           font-size: 14px;
@@ -205,7 +208,8 @@ body {
     @media only screen and (max-width: 375px) {
       .podcast-card__platforms {
         width: 315px;
-        height: 17px; } }
+        height: 17px;
+        order: 2; } }
     .podcast-card__platforms > * {
       filter: invert(42%) sepia(12%) saturate(1288%) hue-rotate(188deg) brightness(89%) contrast(84%); }
     .podcast-card__platforms img:first-child {
