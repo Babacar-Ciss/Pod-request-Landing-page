@@ -85,7 +85,6 @@ body {
   height: 509px;
   background-color: #121725;
   display: flex;
-  flex-direction: column;
   justify-content: space-around; }
   @media (min-width: 768px) and (max-width: 1440px) {
     .podcast-card {
@@ -163,7 +162,6 @@ body {
       color: #FFF; }
       @media only screen and (max-width: 375px) {
         .podcast-card__input-field--input {
-          order: 2;
           width: 295px;
           height: 46px;
           font-size: 14px;
