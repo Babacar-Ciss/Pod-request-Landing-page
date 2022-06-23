@@ -1,16 +1,18 @@
 const inputField = document.getElementById("input");
 const requestButton = document.getElementById("submit");
-let email = [];
-let regexBefore = /^[a-zA-Z]*?\w/g;
-let regexAfter = "";
+const warningMessage = document.getElementById("warning");
+let regex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 let result = true;
 
 
 requestButton.addEventListener("click", () => {
-    console.log(email[0]);
-    email = inputField.value.split("@");
-    result = regexBefore.test(email[0]);
+    result = regex.test(inputField.value);
 
-    console.log(result);
-
+    if(result) {
+        warningMessage.classList.add("hidden");
+        alert("Votre email est valide!")    
+    }
+    else {
+        warningMessage.classList.remove("hidden");
+    }
 })

@@ -152,7 +152,8 @@ body {
         line-height: 25px;
         text-align: center; } }
   .podcast-card__input-field {
-    position: relative; }
+    position: relative;
+    transition: all .2s; }
     @media only screen and (max-width: 375px) {
       .podcast-card__input-field {
         order: 3; } }
@@ -242,4 +243,5 @@ body {
           height: 15px; } }
 
 .hidden {
-  display: none; }
+  display: none;
+  transform: scale(3); }
